@@ -5,20 +5,7 @@
           <i class="fas fa-user-plus"></i> Register
         </h1>
        
-        <!-- Partials messages.ejs starts  -->
-
-        <% if(typeof errors != 'undefined') { %>
-          <% errors.forEach(function(error) { %>
-              <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                  <%= error.msg %>
-                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-              </div>
-          <% }); %>
-        <% } %>
-
-      <!-- partials/messages.ejs end  -->
+       <%- include ('./partials/messages') %>
 
         <form action="/users/register" method="POST">
           <div class="form-group">
